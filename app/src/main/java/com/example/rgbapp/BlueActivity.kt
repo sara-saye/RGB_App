@@ -20,7 +20,8 @@ class BlueActivity : AppCompatActivity() {
         }
         val btnred = findViewById<Button>(R.id.redbutton)
         btnred.setOnClickListener {
-            val i = Intent(this, RedActivity::class.java)
+            val i = Intent(this, MainActivity::class.java)
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(i)
         }
     }
